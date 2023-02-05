@@ -1,0 +1,9 @@
+version: '2'
+services:
+    ripme:
+        image: ripme
+        container_name: ripme
+        volumes:
+            - /mnt/storage/archive/web/dl/ripme-data/:/data
+        network_mode: container:mullvadvpn-gluetun-1
+        restart: unless-stopped
